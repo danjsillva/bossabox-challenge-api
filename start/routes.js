@@ -1,4 +1,4 @@
-'use strict'
+"use strict";
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +14,20 @@
 */
 
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
-const Route = use('Route')
+const Route = use("Route");
 
-Route.get('/', () => {
-  return { greeting: 'Hello world' }
-})
+Route.get("/", () => {
+  return { greeting: "Wellcome to VUTTR API" };
+});
+
+Route.get("/users", "UserController.index");
+Route.get("/users/:id", "UserController.show");
+Route.post("/users", "UserController.store");
+Route.put("/users/:id", "UserController.update");
+Route.delete("/users/:id", "UserController.destroy");
+
+Route.get("/tools", "ToolController.index");
+Route.get("/tools/:id", "ToolController.show");
+Route.post("/tools", "ToolController.store");
+Route.put("/tools/:id", "ToolController.update");
+Route.delete("/tools/:id", "ToolController.destroy");
