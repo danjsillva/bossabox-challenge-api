@@ -5,9 +5,9 @@ const Schema = use("Schema");
 
 class ToolsTagsSchema extends Schema {
   up() {
-    this.create("tools_tags", table => {
+    this.create("tool_tags", table => {
       table
-        .integer("tools_id", 254)
+        .integer("tool_id", 254)
         .notNullable()
         .references("id")
         .inTable("tools");
@@ -16,7 +16,7 @@ class ToolsTagsSchema extends Schema {
   }
 
   down() {
-    this.drop("tools_tags");
+    this.drop("tool_tags");
   }
 }
 
