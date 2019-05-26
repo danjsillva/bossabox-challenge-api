@@ -20,14 +20,17 @@ Route.get("/", () => {
   return { greeting: "Wellcome to VUTTR API" };
 });
 
+Route.post("/auth", "AuthController.auth");
+Route.get("/auth", "AuthController.check");
+
 Route.get("/users", "UserController.index");
 Route.get("/users/:id", "UserController.show");
 Route.post("/users", "UserController.store");
 Route.put("/users/:id", "UserController.update");
 Route.delete("/users/:id", "UserController.destroy");
 
-Route.get("/tools", "ToolController.index");
-Route.get("/tools/:id", "ToolController.show");
-Route.post("/tools", "ToolController.store");
-Route.put("/tools/:id", "ToolController.update");
-Route.delete("/tools/:id", "ToolController.destroy");
+Route.get("/tools", "ToolController.index").middleware("auth");
+Route.get("/tools/:id", "ToolController.show").middleware("auth");
+Route.post("/tools", "ToolController.store").middleware("auth");
+Route.put("/tools/:id", "ToolController.update").middleware("auth");
+Route.delete("/tools/:id", "ToolController.destroy").middleware("auth");
