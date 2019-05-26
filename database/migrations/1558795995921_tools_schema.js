@@ -11,6 +11,7 @@ class ToolsSchema extends Schema {
       table.string("title", 80).notNullable();
       table.string("link", 254).notNullable();
       table.string("description", 254).notNullable();
+      table.string("tags", 960);
     });
   }
 

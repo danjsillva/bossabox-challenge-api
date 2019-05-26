@@ -10,10 +10,7 @@ class ToolController {
   }
 
   async show({ request, response, params }) {
-    const tool = await Tool.query()
-      .where("id", params.id)
-      .with("tags")
-      .fetch();
+    const tool = await Tool.find(params.id);
 
     return tool;
   }
