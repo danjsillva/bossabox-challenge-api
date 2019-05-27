@@ -8,10 +8,10 @@ class ToolsSchema extends Schema {
     this.create("tools", table => {
       table.increments();
       table.timestamps();
-      table.string("title", 80).notNullable();
-      table.string("link", 254).notNullable();
-      table.string("description", 254).notNullable();
-      table.string("tags", 960);
+      table.string("title", 96).notNullable();
+      table.string("link", 1024).notNullable();
+      table.string("description", 1024).notNullable();
+      table.string("tags", 4096);
     });
   }
 
