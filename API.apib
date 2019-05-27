@@ -3,16 +3,15 @@ HOST: http://localhost:3000
 
 # VUTTR (Very Useful Tools to Remember) API
 
-Bem-vindo à documentação da **VUTTR API**. Esta API foi desenvolvida para o desafio da 
-[bossabox](http://bossabox.com).
+Welcome to **VUTTR API**. This API was developed by **Daniel Silva** for the [bossabox](http://bossabox.com) challenge.
 
 NOTE: This document is a **work in progress**.
 
 # Group Auth
 
-## Autenticação [/auth]
+## User auth and token [/auth]
 
-### Autenticar usuário [POST]
+### User auth [POST]
 
 + Request
     + Headers
@@ -75,7 +74,7 @@ NOTE: This document is a **work in progress**.
         ]
         ```
 
-### Verificar token [GET]
+### Check token [GET]
 
 + Request
     + Headers
@@ -109,9 +108,9 @@ NOTE: This document is a **work in progress**.
 
 # Group Users
 
-## Usuários [/users]
+## Users [/users]
 
-### Listar usuários [GET]
+### Users list [GET]
 
 + Request
     + Headers
@@ -138,7 +137,7 @@ NOTE: This document is a **work in progress**.
         ]
         ```
 
-### Adicionar usuários [POST]
+### Add new user [POST]
 
 + Request
     + Headers
@@ -172,9 +171,9 @@ NOTE: This document is a **work in progress**.
         }
         ```
 
-## Usuário [/users/:id]
+## User [/users/:id]
 
-### Buscar usuário [GET]
+### Get user [GET]
 
 + Request
     + Headers
@@ -199,7 +198,7 @@ NOTE: This document is a **work in progress**.
         }
         ```
 
-### Alterar usuário [PUT]
+### Update user [PUT]
 
 + Request
     + Headers
@@ -233,7 +232,7 @@ NOTE: This document is a **work in progress**.
         }
         ```
 
-### Remover usuário [DELETE]
+### Remove user [DELETE]
 
 + Request
     + Headers
@@ -260,9 +259,9 @@ NOTE: This document is a **work in progress**.
 
 # Group Tools
 
-## Ferramentas [/tools]
+## Tools [/tools]
 
-### Listar ferramentas [GET]
+### Tools list [GET]
 
 + Request
     + Headers
@@ -336,7 +335,7 @@ NOTE: This document is a **work in progress**.
         Content-Type: text/html
         ```
         
-### Adicionar ferramentas [POST]
+### Add new tool [POST]
 
 + Request
     + Headers
@@ -387,9 +386,9 @@ NOTE: This document is a **work in progress**.
         Content-Type: text/html
         ```
 
-## Ferramenta [/tools/:id]
+## Tool [/tools/:id]
 
-### Buscar ferramenta [GET]
+### Get tool [GET]
 
 + Request
     + Headers
@@ -429,7 +428,7 @@ NOTE: This document is a **work in progress**.
         Content-Type: text/html
         ```
 
-### Alterar ferramenta [PUT]
+### Update tool [PUT]
 
 + Request
     + Headers
@@ -480,7 +479,7 @@ NOTE: This document is a **work in progress**.
         Content-Type: text/html
         ```
 
-### Remover ferramenta [DELETE]
+### Remove tool [DELETE]
 
 + Request
     + Headers

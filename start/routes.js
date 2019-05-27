@@ -17,7 +17,7 @@
 const Route = use("Route");
 
 Route.get("/", () => {
-  return { greeting: "Wellcome to VUTTR API" };
+  return { greeting: "Welcome to VUTTR API" };
 });
 
 Route.group(() => {
