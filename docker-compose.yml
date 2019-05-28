@@ -9,4 +9,4 @@ services:
     working_dir: /usr/src/api
     ports:
       - 3000:3000
-    command: sh -c "yarn install && adonis migration:run && aglio -i API.apib -o api.html && adonis serve --dev"
+    command: sh -c "aglio -i API.apib -o api.html && yarn install && adonis migration:run && adonis serve --dev"

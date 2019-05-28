@@ -38,10 +38,18 @@ This project uses node-alpine docker image with @adonisjs/cli and aglio global p
 
 All tasks that this magic command runs are listed below and can be altered according you need at docker-compose.yml file:
 
-- yarn install
-- aglio -i API.apib -o api.html
-- adonis migration:run
-- adonis serve --dev
+```bash
+aglio -i API.apib -o api.html
+```
+```bash
+yarn install
+```
+```bash
+adonis migration:run
+```
+```bash
+adonis serve --dev
+```
 
 ## API doc
 
